@@ -1,0 +1,29 @@
+/*
+	Aqui ocorrem as alterações de estilos
+*/
+
+a{ 
+	color: yellow;
+	text-decoration-color: darkred;
+	background: darkblue;
+	font-size: 12px;
+}
+p{
+	font-size: 18px;
+	font-family: helvetica, sans-serif;
+}
+h1{
+	color: violet;
+}
+
+#link-google{
+	color: green;
+	text-decoration-color: darkred;
+	background: darkblue;
+	font-size: 12px;
+}
+.home-link{
+	color: darkred;
+	text-decoration-color: darkred;
+	font-size: 14px;
+}
