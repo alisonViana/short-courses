@@ -8,11 +8,38 @@ console.log("Escreve no console do browser")
 	Funções e variáveis utilizadas na pagina hello-world.html
 */
 
-var count = 0;
+var counter = 0;
+const buttonCounter = document.getElementById("buttonCount");
 
-function buttonCount() {
-	count++;
-	document.getElementById("count").innerHTML = count;
+function count() {
+	counter++;
+	document.getElementById("count").innerHTML = counter;
+
+	/*	
+		== igual a
+		=== igual em valor e tipo
+		!= diferente de
+		!== diferente em valor ou tipo
+
+		&& and
+		|| or
+	*/
+	
+	if (counter == 1) {
+		console.log(counter == "1");
+		console.log(counter === "1");	
+		console.log(counter != "1");	
+		console.log(counter !== "1");	
+	}
+
+	if (counter > 0 && counter <= 10) {
+		buttonCounter.style.backgroundColor = "green";
+	} else if (counter > 10 && counter <= 25) {
+		buttonCounter.style.backgroundColor = "orange";
+	} else {
+		buttonCounter.style.backgroundColor = "red";
+	}
+	
 }
 
 const buttonChange = document.querySelector("#buttonChange");
@@ -29,6 +56,10 @@ buttonChange.addEventListener("click", () => {
 buttonBack.addEventListener("click", () => {
 	changeColor("black");
 });
+
+var date = Date();
+document.getElementById("date").innerHTML = date;
+
 
 /* Funções e variáveis de estudo */
 
@@ -74,3 +105,24 @@ console.log(person.courses.join('/'));
 
 person.courses.push("Java");
 console.log(person.courses.join('/'));
+
+var idade = 15;
+var situacao = (idade >= 18) ? "Maioridade" : "Menor";
+console.log(situacao);
+
+var day = new Date().getDate();
+switch (day) {
+	case 0: 	// agrupamento
+	case 6:
+		console.log("Final de semana!");
+		break;
+	default:
+		console.log("Dia normal =(");
+		break;
+}
+
+for (i = 0; i < person.courses.length; i++) {
+	if (i == 1) continue;
+	if (i == 3) break;
+	console.log(person.courses[i]);
+}

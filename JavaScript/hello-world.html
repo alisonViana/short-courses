@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,17 @@
 	<p>
 		You clicked <span id="count">0</span> times the button!
 	</p>
-	<button type="button" onclick="buttonCount()">Click here!</button>
+	<button id="buttonCount" type="button" onclick="count()">Click here!</button>
 
 	<p class="color">
 		Click on the buttons bellow to change the text color!
 	</p>
 	<button id="buttonChange">Change color</button>
 	<button id="buttonBack">Back to normal</button>
+
+	<p>
+		Access time: <span id="date"></span>
+	</p>
 
 	<script src="pageScript.js"></script>
 </body>
